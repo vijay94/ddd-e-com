@@ -13,5 +13,7 @@ public class Main {
         Item sonyHeadPhoneItem = new Item(sonyHeadSet, 1);
         cart.addItem(applePencilItem);
         cart.addItem(sonyHeadPhoneItem);
+
+        cart.removeItem(applePencil.getName());
     }
 }

@@ -1,9 +1,10 @@
 package com.ddd.commerce.domain;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cart {
-    private ArrayList<Item> items;
+    private List<Item> items;
 
     public Cart() {
         this.items = new ArrayList<>();
@@ -11,5 +12,9 @@ public class Cart {
 
     public void addItem(Item item) {
         this.items.add(item);
+    }
+
+    public void removeItem(String name) {
+        items.removeIf(item -> item.getProduct().getName().equals(name));
     }
 }
