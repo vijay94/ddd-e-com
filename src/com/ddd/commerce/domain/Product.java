@@ -1,4 +1,4 @@
-package domain;
+package com.ddd.commerce.domain;
 
 public class Product {
     private String name;
