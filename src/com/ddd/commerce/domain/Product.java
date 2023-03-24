@@ -8,7 +8,16 @@ public class Product {
         this.price = price;
     }
 
+    public Product(String productName) {
+        this.name = productName;
+
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setPrice(Price price) {
+        this.price = price;
     }
 }

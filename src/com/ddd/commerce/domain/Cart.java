@@ -7,6 +7,8 @@ public class Cart {
     private List<Item> items;
     private List<String> removedProducts;
 
+    private boolean checkedOut;
+
     public Cart() {
         this.items = new ArrayList<>();
         this.removedProducts = new ArrayList<>();
@@ -25,5 +27,23 @@ public class Cart {
 
     public List<String> getRemovedProducts() {
         return removedProducts;
+    }
+
+    public void checkOut() {
+        this.checkedOut = true;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public List<Product> getCheckedOutProducts() {
+        List<Product> checkedOutProducts = new ArrayList<>();
+        items.forEach(item -> {
+            for (int i = 0; i < item.getQuantity(); i++) {
+                checkedOutProducts.add(item.getProduct());
+            }
+        });
+        return checkedOutProducts;
     }
 }

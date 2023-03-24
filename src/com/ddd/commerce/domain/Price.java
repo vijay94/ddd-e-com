@@ -9,4 +9,16 @@ public class Price {
         this.amount = amount;
         this.currency = currency;
     }
+
+    public float getAmount() {
+        return amount;
+    }
+
+    public Currency getCurrency() {
+        return currency;
+    }
+
+    public float reducePriceBy(float percentage) {
+        return (this.amount / 100) * (100 - percentage);
+    }
 }
