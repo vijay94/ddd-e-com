@@ -14,7 +14,7 @@ public class Cart {
         this.items.add(item);
     }
 
-    public void removeItem(String name) {
-        items.removeIf(item -> item.getProduct().getName().equals(name));
+    public void removeItem(Product product) {
+        items.removeIf(item -> item.getProduct().equals(product));
     }
 }

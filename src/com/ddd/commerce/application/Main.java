@@ -14,6 +14,6 @@ public class Main {
         cart.addItem(applePencilItem);
         cart.addItem(sonyHeadPhoneItem);
 
-        cart.removeItem(applePencil.getName());
+        cart.removeItem(applePencil);
     }
 }
